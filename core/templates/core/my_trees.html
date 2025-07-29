@@ -10,12 +10,14 @@
     {% if planted_trees %}
     <ul>
         {% for tree in planted_trees %}
-        <li>
-            🌳 {{ tree.tree.name }} (Lat: {{ tree.latitude }}, Long: {{ tree.longitude }}) - em {{
-            tree.planted_at|date:"d/m/Y H:i" }}
-        </li>
+            <li>
+                <a href="{% url 'planted_tree_detail' tree.id %}">
+                    🌳 {{ tree.tree.name }} (Lat: {{ tree.latitude }}, Long: {{ tree.longitude }})
+                </a>
+            </li>
         {% endfor %}
     </ul>
+     
     {% else %}
     <p>Você ainda não plantou nenhuma árvore.</p>
     {% endif %}

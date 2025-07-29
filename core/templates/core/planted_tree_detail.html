@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes da Árvore</title>
+</head>
+<body>
+    <h1>🌳 {{ tree.tree.name }}</h1>
+    <p><strong>Latitude:</strong> {{ tree.latitude }}</p>
+    <p><strong>Longitude:</strong> {{ tree.longitude }}</p>
+    <p><strong>Idade:</strong> {{ tree.age }} anos</p>
+    <p><strong>Plantada em:</strong> {{ tree.planted_at|date:"d/m/Y H:i" }}</p>
+    <p><strong>Plantada por:</strong> {{ tree.user.username }}</p>
+
+    <a href="{% url 'my_trees' %}">⬅ Voltar para Minhas Árvores</a>
+</body>
+</html>
