@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minhas Árvores</title>
+</head>
+
+<body>
+    <h1>Minhas Árvores Plantadas</h1>
+    {% if planted_trees %}
+    <ul>
+        {% for tree in planted_trees %}
+        <li>
+            🌳 {{ tree.tree.name }} (Lat: {{ tree.latitude }}, Long: {{ tree.longitude }}) - em {{
+            tree.planted_at|date:"d/m/Y H:i" }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Você ainda não plantou nenhuma árvore.</p>
+    {% endif %}
+</body>
+
+</html>
