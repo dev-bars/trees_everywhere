@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Detalhes da Árvore</title>
 </head>
+
 <body>
-    <h1>🌳 {{ tree.tree.name }}</h1>
+    <h1>Detalhes da Árvore</h1>
+    <p>Nome: {{ tree.nome_da_arvore }}</p>
     <p><strong>Latitude:</strong> {{ tree.latitude }}</p>
     <p><strong>Longitude:</strong> {{ tree.longitude }}</p>
     <p><strong>Idade:</strong> {{ tree.age }} anos</p>
@@ -13,4 +16,5 @@
 
     <a href="{% url 'my_trees' %}">⬅ Voltar para Minhas Árvores</a>
 </body>
+
 </html>
